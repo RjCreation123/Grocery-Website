@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shop</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <section class="flex">
+        <a href="home.html" class="logo"> <i class="fas fa-shopping-basket"></i> Guru Nanak </a>
+
+        <nav class="navbar">
+          <a href="home.html">home</a>
+          <a href="shop.html">shop</a>
+          <a href="blog.html">blog</a>
+          <a href="about.html">about</a>
+          <a href="contact.html">contact</a>
+          <a href="review.html">review</a>
+        </nav>
+
+        <div class="icons">
+          <div id="menu-btn" class="fas fa-bars"></div>
+          <div id="search-btn" class="fas fa-search"></div>
+          <div id="cart-btn" class="fas fa-shopping-cart"></div>
+          <div id="login-btn" class="fas fa-user"></div>
+        </div>
+
+        <form action="" class="search-form">
+          <input type="search" placeholder="search here..." id="search-box" />
+          <label for="search-box" class="fas fa-search" onclick="submitSearchForm()"></label>
+        </form>
+
+        <div class="shopping-cart" id="shopping-cart"></div>
+
+        <div id="content">
+          <form action="#" class="form login-form">
+            <h3>Login Form</h3>
+            <input type="email" placeholder="Enter your email" class="box" id="email" required />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="box"
+              id="password"
+              required
+            />
+            <div class="remember">
+              <input type="checkbox" name="" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="Login Now" class="btn" />
+            <p>Forget password? <a href="#">Click here</a></p>
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showRegistrationForm()">Create one</a>
+            </p>
+          </form>
+
+          <form action="#" class="form register-form" style="display: none">
+            <h3>Register Form</h3>
+            <input
+              type="text"
+              placeholder="Enter your firs name"
+              class="box"
+              id="first-name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter your last name"
+              class="box"
+              id="last name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="box"
+              id="register-email"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="box"
+              id="register-password"
+              required
+            />
+            <input type="submit" value="Register Now" class="btn" />
+            <p>
+              Already have an account?
+              <a href="#" onclick="showLoginForm()">Login here</a>
+            </p>
+          </form>
+        </div>
+
+        <div id="userDetails" style="display: none">
+          <span id="loggedInUserEmail"></span>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </section>
+    </header>
+
+    <!-- header section ends -->
+
+    <div class="heading">
+      <h1>our shop</h1>
+      <p><a href="home.html">home >></a> shop</p>
+    </div>
+
+    <section class="category">
+      <h1 class="title">our <span>category</span> <a href="#">view all >></a></h1>
+
+      <div class="box-container">
+        <a href="#" class="box">
+          <img src="image/cat-1.png" alt="" />
+          <h3>fresh fruits</h3>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/cat-2.png" alt="" />
+          <h3>vegetables</h3>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/cat-3.png" alt="" />
+          <h3>organic spices</h3>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/cat-5.png" alt="" />
+          <h3>organic wheat</h3>
+        </a>
+      </div>
+    </section>
+    <!-- Products grid starts here -->
+    <section class="products">
+      <h1 class="title">our <span>products</span> <a href="#"></a></h1>
+
+      <div class="box-container">
+        <div id="products-container" class="box-container"></div>
+      </div>
+    </section>
+
+    <!-- footer section starts  -->
+
+    <footer class="footer">
+      <section class="box-container">
+        <div class="box" style="display: flex; flex-direction: column">
+          <h3 style="margin-bottom: 10px">Quick Links</h3>
+          <div style="display: flex; flex-direction: row">
+            <a href="home.html"  style="margin-right:50px"> <i class="fas fa-arrow-right"></i> Home</a>
+            <a href="shop.html"  style="margin-right:50px"> <i class="fas fa-arrow-right" ></i> Shop</a>
+            <a href="about.html"  style="margin-right:50px"> <i class="fas fa-arrow-right"></i> About</a>
+            <a href="review.html"  style="margin-right:50px"> <i class="fas fa-arrow-right"></i> Review</a>
+            <a href="blog.html"  style="margin-right:50px"> <i class="fas fa-arrow-right"></i> Blog</a>
+            <a href="contact.html"  style="margin-right:50px"> <i class="fas fa-arrow-right"></i> Contact</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <div class="credit">©Copyright2023 | all rights reserved!</div>
+
+    <!-- footer section ends -->
+
+    <!-- custom css file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

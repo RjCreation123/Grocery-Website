@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <section class="flex">
+        <a href="home.html" class="logo"> <i class="fas fa-shopping-basket"></i> Guru Nanak </a>
+
+        <nav class="navbar">
+          <a href="home.html">home</a>
+          <a href="shop.html">shop</a>
+          <a href="blog.html">blog</a>
+          <a href="about.html">about</a>
+          <a href="contact.html">contact</a>
+          <a href="review.html">review</a>
+        </nav>
+
+        <div class="icons">
+          <div id="menu-btn" class="fas fa-bars"></div>
+          <div id="search-btn" class="fas fa-search"></div>
+          <div id="cart-btn" class="fas fa-shopping-cart"></div>
+          <div id="login-btn" class="fas fa-user"></div>
+        </div>
+
+        <form action="" class="search-form">
+          <input type="search" placeholder="search here..." id="search-box" />
+          <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+          <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="image/cart-1.jpg" alt="" />
+            <div class="content">
+              <h3>vegetables</h3>
+              <span class="quantity">1</span>
+              <span class="multiply">x</span>
+              <span class="price">$18.99</span>
+            </div>
+          </div>
+          <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="image/cart-2.jpg" alt="" />
+            <div class="content">
+              <h3>milk</h3>
+              <span class="quantity">1</span>
+              <span class="multiply">x</span>
+              <span class="price">$18.99</span>
+            </div>
+          </div>
+          <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="image/cart-3.jpg" alt="" />
+            <div class="content">
+              <h3>Pulses</h3>
+              <span class="quantity">1</span>
+              <span class="multiply">x</span>
+              <span class="price">$18.99</span>
+            </div>
+          </div>
+          <h3 class="total">total : <span>56.97</span></h3>
+          <a href="#" class="btn">checkout cart</a>
+        </div>
+        <div id="content">
+          <form action="#" class="form login-form">
+            <h3>Login Form</h3>
+            <input type="email" placeholder="Enter your email" class="box" id="email" required />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="box"
+              id="password"
+              required
+            />
+            <div class="remember">
+              <input type="checkbox" name="" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="Login Now" class="btn" />
+            <p>Forget password? <a href="#">Click here</a></p>
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showRegistrationForm()">Create one</a>
+            </p>
+          </form>
+
+          <form action="#" class="form register-form" style="display: none">
+            <h3>Register Form</h3>
+            <input
+              type="text"
+              placeholder="Enter your firs name"
+              class="box"
+              id="first-name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter your last name"
+              class="box"
+              id="last name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="box"
+              id="register-email"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="box"
+              id="register-password"
+              required
+            />
+            <input type="submit" value="Register Now" class="btn" />
+            <p>
+              Already have an account?
+              <a href="#" onclick="showLoginForm()">Login here</a>
+            </p>
+          </form>
+        </div>
+
+        <div id="userDetails" style="display: none">
+          <span id="loggedInUserEmail"></span>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </section>
+    </header>
+
+    <!-- header section ends -->
+
+    <div
+      class="home-container"
+      style="position: relative; width: 100%; height: 100vh; overflow: hidden"
+    >
+      <div class="home" style="position: relative; width: 100%; height: 100%">
+        <video
+          autoplay
+          muted
+          loop
+          id="bg-video"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover"
+        >
+          <source
+            src="./video/Ad video for Supermarket (online-video-cutter.com).mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="slides-container" style="position: relative; z-index: 1">
+          <div class="slide active" style="display: flex; align-items: center">
+            <div class="content" style="position: relative; z-index: 2">
+              <div style="margin: 150px;">
+                <h3>organic and fresh</h3>
+                <h3>Guru Nanak Grocery store</h3>
+                <a href="./shop.html" class="btn">shop now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="banner-container">
+      <div class="banner">
+        <img src="image/banner-1.jpg" alt="" />
+        <div class="content">
+          <span>limited sales</span>
+          <span>hurry up!! </span>
+          <h3>upto 50% off</h3>
+          <a href="./shop.html" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div class="banner">
+        <img src="image/banner-2.jpg" alt="" />
+        <div class="content">
+          <span>limited sales</span>
+          <span>hurry up!! </span>
+          <h3>upto 50% off</h3>
+          <a href="./shop.html" class="btn">shop now</a>
+        </div>
+      </div>
+
+      <div class="banner">
+        <img src="image/banner-3.jpg" alt="" />
+        <div class="content">
+          <span>limited sales</span>
+          <span>hurry up!! </span>
+          <h3>upto 50% off</h3>
+          <a href="./shop.html" class="btn">shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section starts  -->
+
+    <footer class="footer">
+      <section class="box-container">
+        <div class="box" style="display: flex; flex-direction: column">
+          <h3 style="margin-bottom: 10px">Quick Links</h3>
+          <div style="display: flex; flex-direction: row">
+            <a href="home.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> Home</a
+            >
+            <a href="shop.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> Shop</a
+            >
+            <a href="about.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> About</a
+            >
+            <a href="review.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> Review</a
+            >
+            <a href="blog.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> Blog</a
+            >
+            <a href="contact.html" style="margin-right: 50px">
+              <i class="fas fa-arrow-right"></i> Contact</a
+            >
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <div class="credit">©Copyright2023 | all rights reserved!</div>
+
+    <!-- footer section ends -->
+
+    <!-- custom css file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
